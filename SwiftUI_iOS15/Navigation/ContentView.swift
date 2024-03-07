@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("showModal") var showModal: Bool = false
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     @EnvironmentObject var model: Model
     
@@ -26,6 +27,10 @@ struct ContentView: View {
             
             TabBar()
                 .offset(y: model.showDetail ? 200 : 0)
+            
+            if showModal {
+                SignUpView()
+            }
         }
         .safeAreaInset(edge: .bottom, content: {
             Color.clear.frame(height: 44)

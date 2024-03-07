@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113E11E72B9218B5008A566B /* AngularButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E11E62B9218B5008A566B /* AngularButtonStyle.swift */; };
+		113E11E92B947893008A566B /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E11E82B947893008A566B /* InputStyle.swift */; };
 		1144B02F2B8C8B79000C380C /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144B02E2B8C8B79000C380C /* MatchedView.swift */; };
 		1144B0312B8CAAD0000C380C /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144B0302B8CAAD0000C380C /* CourseItem.swift */; };
 		1144B0332B8CAB7B000C380C /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144B0322B8CAB7B000C380C /* CourseView.swift */; };
@@ -15,6 +17,7 @@
 		1187231F2B905ADE00AD06A1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187231E2B905ADE00AD06A1 /* SearchView.swift */; };
 		118723212B906BE800AD06A1 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118723202B906BE800AD06A1 /* Suggestion.swift */; };
 		118723232B906F0200AD06A1 /* FrostedGlassStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118723222B906F0200AD06A1 /* FrostedGlassStyle.swift */; };
+		118723252B907F5400AD06A1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118723242B907F5400AD06A1 /* SignUpView.swift */; };
 		11A6459F2B88A04D00602E01 /* StrokeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A6459E2B88A04D00602E01 /* StrokeStyle.swift */; };
 		11A645A12B88A4FD00602E01 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645A02B88A4FD00602E01 /* AccountView.swift */; };
 		11A645A32B89F98A00602E01 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645A22B89F98A00602E01 /* HexagonView.swift */; };
@@ -24,7 +27,7 @@
 		11A645B12B8B51FD00602E01 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645B02B8B51FD00602E01 /* HomeView.swift */; };
 		11A645B42B8B56D200602E01 /* FeatureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645B32B8B56D200602E01 /* FeatureItem.swift */; };
 		11A645B62B8B585300602E01 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645B52B8B585300602E01 /* NavigationBar.swift */; };
-		11A645B82B8C6FEE00602E01 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645B72B8C6FEE00602E01 /* ScrollPreferenceKey.swift */; };
+		11A645B82B8C6FEE00602E01 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645B72B8C6FEE00602E01 /* PreferenceKeys.swift */; };
 		11A645BA2B8C75CE00602E01 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645B92B8C75CE00602E01 /* AnimatableFontModifier.swift */; };
 		11A645BC2B8C7B3D00602E01 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A645BB2B8C7B3D00602E01 /* FeaturedItem.swift */; };
 		11F0627B2B88737F00D94BD5 /* SwiftUI_iOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0627A2B88737F00D94BD5 /* SwiftUI_iOS15App.swift */; };
@@ -34,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113E11E62B9218B5008A566B /* AngularButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularButtonStyle.swift; sourceTree = "<group>"; };
+		113E11E82B947893008A566B /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
 		1144B02E2B8C8B79000C380C /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 		1144B0302B8CAAD0000C380C /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		1144B0322B8CAB7B000C380C /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		1187231E2B905ADE00AD06A1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		118723202B906BE800AD06A1 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		118723222B906F0200AD06A1 /* FrostedGlassStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostedGlassStyle.swift; sourceTree = "<group>"; };
+		118723242B907F5400AD06A1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		11A6459E2B88A04D00602E01 /* StrokeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeStyle.swift; sourceTree = "<group>"; };
 		11A645A02B88A4FD00602E01 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		11A645A22B89F98A00602E01 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
@@ -51,7 +57,7 @@
 		11A645B02B8B51FD00602E01 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		11A645B32B8B56D200602E01 /* FeatureItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItem.swift; sourceTree = "<group>"; };
 		11A645B52B8B585300602E01 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		11A645B72B8C6FEE00602E01 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
+		11A645B72B8C6FEE00602E01 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		11A645B92B8C75CE00602E01 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		11A645BB2B8C7B3D00602E01 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		11F062772B88737F00D94BD5 /* SwiftUI_iOS15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_iOS15.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,8 @@
 				11A645B92B8C75CE00602E01 /* AnimatableFontModifier.swift */,
 				1144B0342B8CC8E8000C380C /* Animations.swift */,
 				118723222B906F0200AD06A1 /* FrostedGlassStyle.swift */,
+				113E11E62B9218B5008A566B /* AngularButtonStyle.swift */,
+				113E11E82B947893008A566B /* InputStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 				1144B02E2B8C8B79000C380C /* MatchedView.swift */,
 				1144B0322B8CAB7B000C380C /* CourseView.swift */,
 				1187231E2B905ADE00AD06A1 /* SearchView.swift */,
+				118723242B907F5400AD06A1 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				11A645A82B8B36A600602E01 /* TabItem.swift */,
-				11A645B72B8C6FEE00602E01 /* ScrollPreferenceKey.swift */,
+				11A645B72B8C6FEE00602E01 /* PreferenceKeys.swift */,
 				11A645BB2B8C7B3D00602E01 /* FeaturedItem.swift */,
 				1159AEAC2B8CE8500003AA19 /* Model.swift */,
 				118723202B906BE800AD06A1 /* Suggestion.swift */,
@@ -195,7 +204,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					11F062762B88737F00D94BD5 = {
 						CreatedOnToolsVersion = 14.1;
@@ -242,6 +251,7 @@
 				1144B02F2B8C8B79000C380C /* MatchedView.swift in Sources */,
 				1144B0332B8CAB7B000C380C /* CourseView.swift in Sources */,
 				11A645A72B8B2FCE00602E01 /* TabBar.swift in Sources */,
+				118723252B907F5400AD06A1 /* SignUpView.swift in Sources */,
 				118723212B906BE800AD06A1 /* Suggestion.swift in Sources */,
 				11A645B12B8B51FD00602E01 /* HomeView.swift in Sources */,
 				11A645B42B8B56D200602E01 /* FeatureItem.swift in Sources */,
@@ -254,10 +264,12 @@
 				11F0627B2B88737F00D94BD5 /* SwiftUI_iOS15App.swift in Sources */,
 				1144B0312B8CAAD0000C380C /* CourseItem.swift in Sources */,
 				11A645A92B8B36A600602E01 /* TabItem.swift in Sources */,
+				113E11E72B9218B5008A566B /* AngularButtonStyle.swift in Sources */,
+				113E11E92B947893008A566B /* InputStyle.swift in Sources */,
 				1144B0352B8CC8E8000C380C /* Animations.swift in Sources */,
 				11A6459F2B88A04D00602E01 /* StrokeStyle.swift in Sources */,
 				1159AEAD2B8CE8500003AA19 /* Model.swift in Sources */,
-				11A645B82B8C6FEE00602E01 /* ScrollPreferenceKey.swift in Sources */,
+				11A645B82B8C6FEE00602E01 /* PreferenceKeys.swift in Sources */,
 				11A645BA2B8C75CE00602E01 /* AnimatableFontModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +313,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -361,6 +374,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

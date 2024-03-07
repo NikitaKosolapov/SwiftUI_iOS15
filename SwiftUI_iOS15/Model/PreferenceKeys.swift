@@ -14,3 +14,11 @@ struct ScrollPreferenceKey: PreferenceKey {
         defaultValue = nextValue()
     }
 }
+
+struct CirclePreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        defaultValue = nextValue()
+    }
+}

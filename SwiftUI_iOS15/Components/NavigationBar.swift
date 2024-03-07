@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    @AppStorage("showModal") var showModal: Bool = false
     @State var showSearch = false
     @State var showAccount = false
     @Binding var hasScrolled: Bool
@@ -42,7 +43,10 @@ struct NavigationBar: View {
                 })
                 
                 Button {
-                    showAccount = true
+//                    showAccount = true
+                    withAnimation(.easeInOut) {
+                        showModal = true
+                    }
                 } label: {
                     Image("Avatar Default")
                         .resizable()
