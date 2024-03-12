@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("isLiteMode") var isLiteMode = true
     @EnvironmentObject var model: Model
     @Namespace var namespace
     @State var hasScrolled: Bool = false
@@ -25,7 +26,7 @@ struct HomeView: View {
             ScrollView {
                 scrollDetection
                 
-                featured
+                featuredSection
                     .sheet(isPresented: $showFeaturedCourse, content: {
                         CourseView(namespace: namespace, course: featuredCourses[selectedFeaturedIndex], show: $showFeaturedCourse)
                     })
@@ -102,7 +103,7 @@ struct HomeView: View {
         }
     }
     
-    var featured: some View {
+    var featuredSection: some View {
         TabView {
             ForEach(Array(featuredCourses.enumerated()), id: \.offset) { index, course in
                 GeometryReader { proxy in
@@ -113,7 +114,7 @@ struct HomeView: View {
                         .padding(.vertical, 40)
                         .rotation3DEffect(.degrees(minX / -10), axis: (x: 0, y: 1, z: 0))
                         .blur(radius: abs(minX / 40))
-                        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
+                        .shadow(color: Color("Shadow").opacity(0.3), radius: isLiteMode ? 5 : 10, x: 0, y: 10)
                         .overlay(
                             Image(course.image)
                                 .resizable()
@@ -129,6 +130,7 @@ struct HomeView: View {
                 }
             }
         }
+        .dynamicTypeSize(.large ... .xxLarge)
         .background(Image("Blob 1").offset(x: 250, y: -100))
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 430)

@@ -34,6 +34,15 @@ struct SignUpView: View {
                 "Already have an account?"
             }
         }
+        
+        var buttonTitle: String {
+            switch self {
+            case .signIn:
+                "Sign in"
+            case .signUp:
+                "Create account"
+            }
+        }
     }
     
     @Namespace var namespace
@@ -46,7 +55,7 @@ struct SignUpView: View {
     @State var appear = [false, false, false]
     @State var appearContent = [false, false, false]
     @AppStorage("showModal") var showModal: Bool = false
-    
+    @AppStorage("isLogged") var isLogged: Bool = false
     
     var body: some View {
         ZStack {
@@ -152,9 +161,10 @@ struct SignUpView: View {
                 .shadow(color: focusedField == .password ? .primary.opacity(0.3) : .clear, radius: 10, x: 0, y: 4)
             
             Button {
-                
+                isLogged = true
+                dismiss()
             } label: {
-                Text("Create account")
+                Text(state.buttonTitle)
                     .frame(maxWidth: .infinity)
             }
             .font(.headline)

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
     @AppStorage("showModal") var showModal: Bool = false
+    @AppStorage("isLogged") var isLogged: Bool = false
     @State var showSearch = false
     @State var showAccount = false
     @Binding var hasScrolled: Bool
@@ -43,17 +45,15 @@ struct NavigationBar: View {
                 })
                 
                 Button {
-//                    showAccount = true
-                    withAnimation(.easeInOut) {
-                        showModal = true
+                    if isLogged {
+                        showAccount = true
+                    } else {
+                        withAnimation(.easeInOut) {
+                            showModal = true
+                        }
                     }
                 } label: {
-                    Image("Avatar Default")
-                        .resizable()
-                        .frame(width: 26, height: 26)
-                        .cornerRadius(10)
-                        .padding(9)
-                        .frostedGlassStyle(cornerRadius: 20)
+                    AvatarView()
                 }
                 .sheet(isPresented: $showAccount, content: {
                     AccountView()

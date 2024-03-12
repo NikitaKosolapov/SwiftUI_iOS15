@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct AccountView: View {
+    @AppStorage("isLiteMode") var isLiteMode = true
+    @AppStorage("isLogged") var isLogged = true
     @State var isDeleted: Bool = false
     @State var isPinned: Bool = false
     @Environment(\.dismiss) var dismiss
+    @State var address = Address(id: 1, country: "Thailand")
+    @StateObject var coinModel = CoinModel()
     
     var body: some View {
         NavigationView {
@@ -19,7 +23,23 @@ struct AccountView: View {
                 
                 menu
                 
+                liteMode
+                
                 links
+                
+                if !coinModel.coins.isEmpty {
+                    coins
+                }
+                
+                signOut
+            }
+            .task {
+                await fetchData()
+                await coinModel.fetchCoins()
+            }
+            .refreshable {
+                await fetchData()
+                await coinModel.fetchCoins()
             }
             .foregroundColor(.primary)
             .listStyle(.insetGrouped)
@@ -56,12 +76,12 @@ struct AccountView: View {
             HStack {
                 Image(systemName: "location")
                     .imageScale(.medium)
-                Text("Thailand")
+                Text(address.country)
                     .foregroundColor(.secondary)
             }
         }
         .padding()
-        .frame(maxWidth: .infinity) // use maxWidth: .infinity instead of HStack
+        .frame(maxWidth: .infinity)
     }
     
     var menu: some View {
@@ -81,6 +101,14 @@ struct AccountView: View {
             }
         }
         .listRowSeparator(.hidden)
+    }
+    
+    var liteMode: some View {
+        Section {
+            Toggle(isOn: $isLiteMode) {
+                Label("Lite mode", systemImage: isLiteMode ? "tortoise" : "hare")
+            }
+        }
     }
     
     var links: some View {
@@ -117,6 +145,33 @@ struct AccountView: View {
         .listRowSeparator(.hidden)
     }
     
+    var coins: some View {
+        Section {
+            ForEach(coinModel.coins) { coin in
+                HStack {
+                    AsyncImage(url: URL(string: coin.logo)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 32, height: 32)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 32, height: 32)
+                    
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(coin.coinName)
+                        Text(coin.acronym)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+        } header: {
+            Text("Coins")
+        }
+    }
+    
     var pinButton: some View {
         Button {
             isPinned.toggle()
@@ -124,6 +179,26 @@ struct AccountView: View {
             Label("pin", systemImage: isPinned ? "pin" : "pin.slash")
         }
         .tint(isPinned ? .yellow : .gray)
+    }
+    
+    var signOut: some View {
+        Button {
+            isLogged = false
+            dismiss()
+        } label: {
+            Text("Sign out")
+                .foregroundStyle(.red)
+        }
+    }
+    
+    func fetchData() async {
+        do {
+            let url = URL(string: "https://random-data-api.com/api/v2/addresses")!
+            let (data, _) = try await URLSession.shared.data(from: url)
+            address = try JSONDecoder().decode(Address.self, from: data)
+        } catch {
+            address = Address(id: 1, country: "Error fetching")
+        }
     }
 }
 

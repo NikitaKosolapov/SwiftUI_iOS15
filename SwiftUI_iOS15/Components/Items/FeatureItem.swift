@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeatureItem: View {
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
     var course: Course = courses[0]
     
     var body: some View {
@@ -32,16 +33,13 @@ struct FeatureItem: View {
             Text(course.text)
                 .font(.footnote)
                 .multilineTextAlignment(.leading)
-                .lineLimit(2)
+                .lineLimit(dynamicTypeSize > .large ? 1 : 2)
                 .frame(maxWidth: .infinity, alignment: .leading) // don't use HStack, use .infinity
                 .foregroundColor(.secondary)
         }
         .padding(.all, 20.0)
-        .padding(.vertical, 20)
         .frame(height: 350.0)
-        .background(.ultraThinMaterial)
-        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .strokeStyle()
+        .frostedGlassStyle(cornerRadius: 30)
         .padding(.horizontal, 20)
     }
 }
