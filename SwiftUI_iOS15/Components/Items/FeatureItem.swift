@@ -41,6 +41,11 @@ struct FeatureItem: View {
         .frame(height: 350.0)
         .frostedGlassStyle(cornerRadius: 30)
         .padding(.horizontal, 20)
+        .frame(maxWidth: 500)
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 40)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.allowsDirectInteraction)
     }
 }
 

@@ -30,6 +30,10 @@ struct SmallCourseItem: View {
                             .frame(width: 26, height: 26)
                             .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
+                    .overlay(
+                        PlayView(isSmall: true)
+                            .frame(width: 62.5, height: 62.5)
+                    )
             }
             .padding(.init(top: 5, leading: 0, bottom: 0, trailing: 0))
             

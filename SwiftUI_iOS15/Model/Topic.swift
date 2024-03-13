@@ -18,3 +18,9 @@ var topics = [
     Topic(title: "UI Design", icon: "eyedropper"),
     Topic(title: "Web development", icon: "laptopcomputer")
 ]
+
+var libraryTopics = [
+    Topic(title: "History", icon: "clock.fill"),
+    Topic(title: "Favorites", icon: "star.fill"),
+    Topic(title: "Downloads", icon: "square.and.arrow.down.fill")
+]

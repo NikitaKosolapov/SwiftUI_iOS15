@@ -22,7 +22,7 @@ struct NavigationBar: View {
                 .background(.ultraThinMaterial)
                 .blur(radius: 10)
                 .opacity(hasScrolled ? 1 : 0)
-            Text("Featured")
+            Text(title)
                 .animatableFont(size: hasScrolled ? 22 : 34, weight: .bold)
                 .font(.largeTitle.bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -55,6 +55,9 @@ struct NavigationBar: View {
                 } label: {
                     AvatarView()
                 }
+                .accessibilityElement()
+                .accessibilityLabel("Account")
+                .accessibilityAddTraits(.isButton)
                 .sheet(isPresented: $showAccount, content: {
                     AccountView()
                 })

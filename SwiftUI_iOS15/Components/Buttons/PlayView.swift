@@ -8,35 +8,51 @@
 import SwiftUI
 
 struct PlayView: View {
+    var isSmall: Bool = false
+    
     var body: some View {
-        PlayShape()
-            .fill(Color("Shadow"))
-            .background(
-                PlayShape()
-                    .fill(.angularGradient(colors: [.red, .pink, .cyan, .yellow], center: .center, startAngle: .degrees(0), endAngle: .degrees(360)))
-                    .blur(radius: 10)
-            )
-            .overlay(
-                PlayShape()
-                    .stroke(.white)
-            )
-            .frame(width: 52, height: 52)
-            .offset(x: 5)
-            .frame(width: 120, height: 120)
-            .frostedGlassStyle(cornerRadius: 60)
-            .overlay(
-                CircleProgressView(lineWidth: 8, progress: 0.5)
-            )
-            .overlay(
-                Text("12:08")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.secondary)
-                    .padding(.horizontal, 4)
-                    .background(Color(UIColor.systemBackground).opacity(0.3),
-                                in: RoundedRectangle(cornerRadius: 4, style: .continuous))
-                    .offset(y: 40)
-            )
+        GeometryReader { proxy in
+            let width = proxy.frame(in: .global).width
+            
+            PlayShape()
+                .fill(Color("Shadow"))
+                .overlay(
+                    PlayShape()
+                        .stroke(.white)
+                )
+                .padding(width * 0.28)
+                .background(
+                    PlayShape()
+                        .fill(.angularGradient(colors: [.red, .pink, .cyan, .yellow], center: .center, startAngle: .degrees(0), endAngle: .degrees(360)))
+                        .blur(radius: 10)
+                        .padding(width * 0.25)
+                )
+                .offset(x: 5)
+                .frame(maxWidth: 120, maxHeight: 120)
+                .frostedGlassStyle(cornerRadius: 60)
+                .overlay(
+                    CircleProgressView(lineWidth: isSmall ? 4 : 8, progress: 0.5)
+                )
+                .overlay(
+                    overlay
+                )
+        }
+    }
+    
+    @ViewBuilder
+    var overlay: some View {
+      if !isSmall {
+          Text("12:08")
+              .font(.footnote)
+              .fontWeight(.semibold)
+              .foregroundStyle(.secondary)
+              .padding(.horizontal, 4)
+              .background(Color(UIColor.systemBackground).opacity(0.3),
+                          in: RoundedRectangle(cornerRadius: 4, style: .continuous))
+              .offset(y: 40)
+      } else {
+          Color.clear
+      }
     }
 }
 

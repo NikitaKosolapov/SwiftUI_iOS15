@@ -19,10 +19,10 @@ var tabItems = [
     TabItem(text: "Learn Now", icon: "house", tab: .home, color: .teal),
     TabItem(text: "Explore", icon: "magnifyingglass", tab: .explore, color: .blue),
     TabItem(text: "Notifications", icon: "bell", tab: .notifications, color: .red),
-    TabItem(text: "Library", icon: "rectangle.stack.badge.play", tab: .library, color: .pink)
+    TabItem(text: "Library", icon: "rectangle.stack.badge.play", tab: .library, color: .purple)
 ]
 
-enum Tab: String {
+enum Tab: Int {
     case home
     case explore
     case notifications

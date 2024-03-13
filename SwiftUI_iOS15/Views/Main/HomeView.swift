@@ -32,11 +32,8 @@ struct HomeView: View {
                     })
                 
                 Text("Cources".uppercased())
-                    .font(.footnote.weight(.semibold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundStyle(.secondary)
-                    .padding(.leading, 20)
-                    .padding(.bottom, 16)
+                    .sectionTitle(insets: .init(top: 0, leading: 20, bottom: 0, trailing: 20))
+                    .accessibilityAddTraits(.isHeader)
                 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
                     if !show {
@@ -109,9 +106,6 @@ struct HomeView: View {
                 GeometryReader { proxy in
                     let minX = proxy.frame(in: .global).minX
                     FeatureItem(course: course)
-                        .frame(maxWidth: 500)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 40)
                         .rotation3DEffect(.degrees(minX / -10), axis: (x: 0, y: 1, z: 0))
                         .blur(radius: abs(minX / 40))
                         .shadow(color: Color("Shadow").opacity(0.3), radius: isLiteMode ? 5 : 10, x: 0, y: 10)
@@ -122,6 +116,7 @@ struct HomeView: View {
                                 .frame(height: 230)
                                 .offset(x: 32, y: -80)
                                 .offset(x: minX / 2)
+                                .accessibilityHidden(true)
                         )
                         .onTapGesture {
                             selectedFeaturedIndex = index
@@ -131,7 +126,10 @@ struct HomeView: View {
             }
         }
         .dynamicTypeSize(.large ... .xxLarge)
-        .background(Image("Blob 1").offset(x: 250, y: -100))
+        .background(
+            Image("Blob 1")
+                .offset(x: 250, y: -100)
+                .accessibilityHidden(true))
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 430)
     }

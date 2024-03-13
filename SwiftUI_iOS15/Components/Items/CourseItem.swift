@@ -53,6 +53,8 @@ struct CourseItem: View {
                 .matchedGeometryEffect(id: "mask\(course.id)", in: namespace)
         )
         .frame(height: 300)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
     }
 }
 

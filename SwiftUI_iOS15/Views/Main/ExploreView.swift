@@ -47,10 +47,7 @@ struct ExploreView: View {
     var topicsSection: some View {
         VStack {
             Text("topics".uppercased())
-                .font(.footnote.weight(.semibold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.top, 26)
+                .sectionTitle()
             
             VStack(alignment: .leading, spacing: 12) {
                 ForEach(Array(topics.enumerated()), id: \.offset) { index, topic in
@@ -70,10 +67,7 @@ struct ExploreView: View {
     var handbookSection: some View {
         VStack {
             Text("popular".uppercased())
-                .font(.footnote.weight(.semibold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.top, 26)
+                .sectionTitle()
             
             HStack(alignment: .top, spacing: 30) {
                 ForEach(handbooks) { handbook in

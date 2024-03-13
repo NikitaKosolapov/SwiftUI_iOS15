@@ -43,6 +43,10 @@
 		11BE2D4B2BA005CC008688CE /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D4A2BA005CC008688CE /* PlayView.swift */; };
 		11BE2D4D2BA00648008688CE /* Handbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D4C2BA00648008688CE /* Handbook.swift */; };
 		11BE2D4F2BA00661008688CE /* HandbookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D4E2BA00661008688CE /* HandbookItem.swift */; };
+		11BE2D512BA06BD2008688CE /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D502BA06BD2008688CE /* NotificationsView.swift */; };
+		11BE2D532BA0709D008688CE /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D522BA0709D008688CE /* LibraryView.swift */; };
+		11BE2D552BA07C50008688CE /* SectionTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D542BA07C50008688CE /* SectionTitleModifier.swift */; };
+		11BE2D572BA080CA008688CE /* CertificateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE2D562BA080CA008688CE /* CertificateView.swift */; };
 		11F0627B2B88737F00D94BD5 /* SwiftUI_iOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0627A2B88737F00D94BD5 /* SwiftUI_iOS15App.swift */; };
 		11F0627D2B88737F00D94BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0627C2B88737F00D94BD5 /* ContentView.swift */; };
 		11F0627F2B88738000D94BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F0627E2B88738000D94BD5 /* Assets.xcassets */; };
@@ -86,6 +90,10 @@
 		11BE2D4A2BA005CC008688CE /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		11BE2D4C2BA00648008688CE /* Handbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handbook.swift; sourceTree = "<group>"; };
 		11BE2D4E2BA00661008688CE /* HandbookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandbookItem.swift; sourceTree = "<group>"; };
+		11BE2D502BA06BD2008688CE /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		11BE2D522BA0709D008688CE /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		11BE2D542BA07C50008688CE /* SectionTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleModifier.swift; sourceTree = "<group>"; };
+		11BE2D562BA080CA008688CE /* CertificateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateView.swift; sourceTree = "<group>"; };
 		11F062772B88737F00D94BD5 /* SwiftUI_iOS15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_iOS15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0627A2B88737F00D94BD5 /* SwiftUI_iOS15App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_iOS15App.swift; sourceTree = "<group>"; };
 		11F0627C2B88737F00D94BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 				118723222B906F0200AD06A1 /* FrostedGlassStyle.swift */,
 				113E11E62B9218B5008A566B /* AngularButtonStyle.swift */,
 				113E11E82B947893008A566B /* InputStyle.swift */,
+				11BE2D542BA07C50008688CE /* SectionTitleModifier.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -179,6 +188,8 @@
 			children = (
 				11A645B02B8B51FD00602E01 /* HomeView.swift */,
 				11BE2D3B2B9A1EF7008688CE /* ExploreView.swift */,
+				11BE2D502BA06BD2008688CE /* NotificationsView.swift */,
+				11BE2D522BA0709D008688CE /* LibraryView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 				11BE2D3E2B9A1F8C008688CE /* SmallCourseItem.swift */,
 				11BE2D422B9D5B5C008688CE /* TopicItem.swift */,
 				11BE2D4E2BA00661008688CE /* HandbookItem.swift */,
+				11BE2D562BA080CA008688CE /* CertificateView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -357,17 +369,21 @@
 				11A645BC2B8C7B3D00602E01 /* FeaturedItem.swift in Sources */,
 				11A645A32B89F98A00602E01 /* HexagonView.swift in Sources */,
 				11BE2D302B996177008688CE /* Address.swift in Sources */,
+				11BE2D552BA07C50008688CE /* SectionTitleModifier.swift in Sources */,
 				11A645B62B8B585300602E01 /* NavigationBar.swift in Sources */,
 				11BE2D3F2B9A1F8C008688CE /* SmallCourseItem.swift in Sources */,
 				118723232B906F0200AD06A1 /* FrostedGlassStyle.swift in Sources */,
+				11BE2D572BA080CA008688CE /* CertificateView.swift in Sources */,
 				11F0627D2B88737F00D94BD5 /* ContentView.swift in Sources */,
 				11A645A52B89FD5B00602E01 /* BlobView.swift in Sources */,
 				11F0627B2B88737F00D94BD5 /* SwiftUI_iOS15App.swift in Sources */,
 				1144B0312B8CAAD0000C380C /* CourseItem.swift in Sources */,
+				11BE2D512BA06BD2008688CE /* NotificationsView.swift in Sources */,
 				11BE2D2E2B9957DE008688CE /* AvatarView.swift in Sources */,
 				11A645A92B8B36A600602E01 /* TabItem.swift in Sources */,
 				11BE2D3C2B9A1EF7008688CE /* ExploreView.swift in Sources */,
 				113E11E72B9218B5008A566B /* AngularButtonStyle.swift in Sources */,
+				11BE2D532BA0709D008688CE /* LibraryView.swift in Sources */,
 				113E11E92B947893008A566B /* InputStyle.swift in Sources */,
 				1144B0352B8CC8E8000C380C /* Animations.swift in Sources */,
 				11BE2D4D2BA00648008688CE /* Handbook.swift in Sources */,

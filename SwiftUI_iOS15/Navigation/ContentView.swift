@@ -20,9 +20,9 @@ struct ContentView: View {
             case .explore:
                 ExploreView()
             case .notifications:
-                AccountView()
+                NotificationsView()
             case .library:
-                AccountView()
+                LibraryView()
             }
             
             TabBar()
@@ -33,7 +33,7 @@ struct ContentView: View {
             }
         }
         .safeAreaInset(edge: .bottom, content: {
-            Color.clear.frame(height: 44)
+            Color.clear.frame(height: 88)
         })
     }
 }
